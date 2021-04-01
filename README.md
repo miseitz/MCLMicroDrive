@@ -11,9 +11,10 @@ Functions inside the wrapper
 The list of the c-functions from Mad City Lab is provided in the word document in this folder. Functions in this python wrapper were derived from all of these c-functions. Here, is a brief description of the functions.
 
 Functions include:
+
     - getPosition()
         Reads the encoders.
-        return (x,y,z) encoder position
+        return (x,y,z) encoder position      
     - move(x,y,z,velocity = 3)
         Moves to the (x,y,z) encoder position with given velocity (mm/s).
         return (x,y,z) from encoders
@@ -73,6 +74,7 @@ Functions include:
         return None
     
  "Private" functions:
+ 
     - wait
         Waits for the previous function to finish.
         return None
