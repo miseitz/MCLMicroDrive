@@ -94,11 +94,8 @@ Functions include:
         return errorCode of movement
 
 Additional remarks:
-    - Wait should be called after the movement to guarantee that the motors are 
-    not moving anymore. Trying to read the encoders or move the motors, while
-    they are still movingn, might affect the internal timing pulses.
-    However, wait should not  be called multiple times, as it is slowed if it
-    is called more then once.
+
+Wait should be called after the movement to guarantee that the motors are not moving anymore. Trying to read the encoders or move the motors, while they are still movingn, might affect the internal timing pulses. However, wait should not  be called multiple times, as it is slowed if it is called more then once.
 
 
 PS: Please let me know if you find any mistakes such that we can fix it for everyone! Thanks!
