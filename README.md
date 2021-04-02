@@ -1,13 +1,15 @@
 # MCLMicroDrive
 Python class to control a Mad City Labs MicroDrive with 3 axes (26.1mm range) and 3 encoders (50 nm resolution).
 
-The class calls c-functions from the dll (provided by Mad City Labs), converts the python input into the right format, and returns the output from the MicroDrive.
-We bought a new MicroDrive with 3 axes and 3 encoders in the beginning of 2020 (in case there is a significant software update).
+The class calls C-functions from the dll (provided by Mad City Labs), converts the python input into the C format, and returns the output from the MicroDrive.
+The class was written for a new MicroDrive with 3 axes and 3 encoders, which was bought in the beginning of 2020 (in case there is a significant software update).
 
-How to get the wrapper working
+## How to get the MicroDrive class working
 
+1. ...
+2. ...
 
-Functions inside the wrapper
+## Functions of the MicroDrive class
 The list of the c-functions from Mad City Lab is provided in the word document in this folder. Functions in this python wrapper were derived from all of these c-functions. Here, is a brief description of the functions.
 
 Functions include:
