@@ -6,11 +6,23 @@ The class was written for a new MicroDrive with 3 axes and 3 encoders, which was
 
 ## How to get the MicroDrive class working
 
-1. ...
-2. ...
+    1. Dowload all the files to one folder
+    2. Copy the ???.dll file from Mad City Labs into the same folder (should come with your installation files from Mad City Labs)
+    3. Open the setup.py file and change the "library_dirs" to the folder you created. Save the changes in the setup.py file.
+    4. Now lets build the module
+    5. Open the terminal (if you use Anaconda, open the Anaconda terminal)
+    6. Run: "python setup.py build_ext --inplace"
+    7. Done!
+
+Now you can import the module in your scripts through: "import MicroDrive" 
+For this to work properly you have to have the your script in the same folder as the MicroDrive.py?? file. 
+Or add the folder to the path for modules through: 
+
+     import sys
+     sys.path.insert(0, pathToFolderOfMicroDrive) # e.g. r'C:\Program Files\MCL MicroDrive'
 
 ## Functions of the MicroDrive class
-The list of the c-functions from Mad City Lab is provided in the word document in this folder. Functions in this python wrapper were derived from all of these c-functions. Here, is a brief description of the functions.
+The list of the C-functions from Mad City Lab is provided in the word document in this folder. Functions in this python wrapper were derived from all of these C-functions. Here, is a brief description of the functions.
 
 Functions include:
 
