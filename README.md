@@ -30,7 +30,7 @@ Or add the folder of the MicroDrive.c file to the path for modules in python thr
 ## Functions of the MicroDrive class
 The list of the C-functions from Mad City Lab is provided in the word document MicroDrive_2_0.doc. Functions in this python wrapper were derived from all of these C-functions. Here, is a brief description of the functions that were implemented.
 
-Functions include:
+Functions include (movements and velocities are in mm and mm/s, respectively):
 
     - getPosition()
         Reads the encoders.
