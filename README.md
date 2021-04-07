@@ -8,7 +8,7 @@ The class was written for a new MicroDrive with 3 axes and 3 encoders, which was
 - MicroDrive_2_0.doc: Description of C-functions provided by Mad City Labs
 - MicroDrive_v1.pyx: Python module/wrapper
 - setup.py: Setup file to build the .c file
-- 
+- MCL_MicroDriveExample.py: Example file on how to create a MicroDrive object, home the encoders, move the stage, and readout the encoder position.
 
 ## How to get the MicroDrive class working
 
