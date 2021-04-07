@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Class to control the Mad City Labs MicroDrive with 3 axes (26.1mm range) and encoders (50 nm resolution).
+Movements and velocities are in mm and mm/s, respectively.
 
 Functions include:
     - getPosition()
