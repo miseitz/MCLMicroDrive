@@ -4,26 +4,31 @@ Python class to control a Mad City Labs MicroDrive with 3 axes (26.1mm range) an
 The class calls C-functions from the dll (provided by Mad City Labs), converts the python input into the C format, and returns the output from the MicroDrive.
 The class was written for a new MicroDrive with 3 axes and 3 encoders, which was bought in the beginning of 2020 (in case there is a significant software update).
 
+## Files in this directory
+- MicroDrive_2_0.doc: Description of C-functions provided by Mad City Labs
+- MicroDrive_v1.pyx: Python module/wrapper
+- setup.py: Setup file to build the .c file
+- 
+
 ## How to get the MicroDrive class working
 
-    1. Dowload the MicroDrive_??? and setup.py file to one folder.
-    2. Copy the ???.dll file from Mad City Labs into the same folder (should come with your installation files from Mad City Labs)
-    3. Open the setup.py file and change the "library_dirs" to the folder you created. Save the changes in the setup.py file.
-    4. Now lets build the module
-    5. Open the terminal (if you use Anaconda, open the Anaconda terminal)
-    6. Navigate to your folder.
-    7. Run: "python setup.py build_ext --inplace"
-    8. Done!
+    1. Dowload the MicroDrive_v1.pyx and setup.py file to one folder.
+    2. Copy the MicroDrive.dll file from Mad City Labs into the same folder (should come with your installation files from Mad City Labs)
+    3. In the "MicroDrive_v1.pyx" file you will want to update the standard value for "mcl_lib" as one of the initialization arguments of the MicroDrive class. Replace the path with the folder where you saved the dll file to. If you do not do that, you will have to provide the path everytime you create a new MicroDrive object. 
+    4. Now lets build the module: Open the terminal (if you use Anaconda, open the Anaconda terminal)
+    5. Navigate to your folder.
+    6. Run: "python setup.py build_ext --inplace"
+    7. Done!
 
 Now you can import the module in your scripts through: "import MicroDrive".
-For this to work properly you have to have the your script in the same folder as the MicroDrive.pyx file. 
-Or add the folder to the path for modules through: 
+For this to work properly you have to have the your script in the same folder as the MicroDrive.c file. 
+Or add the folder of the MicroDrive.c file to the path for modules in python through:
 
      import sys
      sys.path.insert(0, pathToFolderOfMicroDrive) # e.g. r'C:\Program Files\MCL MicroDrive'
 
 ## Functions of the MicroDrive class
-The list of the C-functions from Mad City Lab is provided in the word document in this folder. Functions in this python wrapper were derived from all of these C-functions. Here, is a brief description of the functions.
+The list of the C-functions from Mad City Lab is provided in the word document MicroDrive_2_0.doc. Functions in this python wrapper were derived from all of these C-functions. Here, is a brief description of the functions that were implemented.
 
 Functions include:
 
